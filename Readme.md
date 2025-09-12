@@ -1,5 +1,6 @@
 # USA House Price Prediction
 `ML, Data Science, Regression, Python`
+
 This project aims to predict house prices in the USA using various machine learning models. The dataset includes features such as the number of bedrooms, bathrooms, square footage, location, and other relevant attributes. The goal is to build a robust model that can accurately estimate house prices based on these features.
 
 <img src="eval/predictions_distribution.png" alt="Illustration" width="100%">
@@ -72,7 +73,7 @@ To run this project, make sure you have **Python** (>=3.11) installed on your sy
 1. **Clone the repository**
 
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/aurvl/Housing-Price-Prediction.git
    cd Housing-Price-Prediction
    ```
 
