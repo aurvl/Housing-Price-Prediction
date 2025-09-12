@@ -40,7 +40,7 @@ The project follows a structured approach to data preprocessing, model training,
 1. **Data Exploration**: Initial exploration of the dataset to understand the features and their distributions.
 2. **Data Preprocessing**: Handling missing values, encoding categorical variables, and scaling numerical
     features. Special attention is given to the `address` column, which is preprocessed to extract meaningful information.
-3. **Model Selection**: Several regression models are tested, including:
+3. **Model Selection**. Several regression models are tested, including:
     - Linear Regression
     - Bayesian Ridge Regression
     - Random Forest Regressor
@@ -85,7 +85,7 @@ To run this project, make sure you have **Python** (>=3.11) installed on your sy
 
 3. **Run the project**
 
-   * Option 1: Open the Jupyter notebook and execute the cells sequentially:
+   * Option 1: Open the Jupyter notebook and execute the cells sequentially.
 
    * Option 2: Run the training and evaluation script directly:
 
@@ -95,7 +95,7 @@ To run this project, make sure you have **Python** (>=3.11) installed on your sy
 
 
 ### **Note**
-- *The project was developed and tested using Python 3.10 on Windows 11 with Jupyter Notebook and VSCode. Results may vary slightly with different Python versions or operating systems.*
+- *The project was developed and tested using Python 3.11 on Windows 11 with Jupyter Notebook and VSCode. Results may vary slightly with different Python versions or operating systems.*
 - *To ensure reproducibility, random seeds were set for NumPy, scikit-learn, and XGBoost. However, due to the nature of some algorithms, results may still show minor variations between runs.*
 - *The preprocessing pipeline is effective but not yet fully optimized. Further improvements in feature engineering, especially around the `address` column, could enhance results.*
 - ***To go further:***
