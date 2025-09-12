@@ -5,8 +5,21 @@ This project aims to predict house prices in the USA using various machine learn
 <img src="eval/predictions_distribution.png" alt="Illustration" width="100%">
 
 ## Structure of the Project
-```bash
-
+```.
+|-- Readme.md
+|-- eval
+|   |-- actual_vs_predicted_xgb.png
+|   |-- eval.csv
+|   |-- labels.csv
+|   |-- predictions_distribution.png
+|   |-- submission.csv
+|-- house_data.csv
+|-- models
+|   |-- transforms
+|       |-- processor.pkl
+|-- notebook.ipynb
+|-- requirements.txt
+|-- train_eval.py
 ```
 
 ## Data
