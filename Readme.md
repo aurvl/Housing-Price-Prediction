@@ -46,20 +46,21 @@ The project follows a structured approach to data preprocessing, model training,
     - Gradient Boosting Regressor
     - K-Nearest Neighbors Regressor
     - XGBoost Regressor
-4. **Hyperparameter Tuning**: Using techniques like Randomized Search Cross-Validation to find the best hyperparameters for each model.
-5. **Model Evaluation**: Evaluating model performance using metrics such as Mean Squared Error (MSE) and R-squared ($R^2$).
-6. **Final Predictions**: Generating predictions on the evaluation dataset and preparing a submission file.
+4. **Feature Selection**: Using techniques like Lasso and Random Forest feature importance to select the most relevant features for each model.
+5. **Hyperparameter Tuning**: Using techniques like Randomized Search Cross-Validation to find the best hyperparameters for each model.
+6. **Model Evaluation**: Evaluating model performance using metrics such as Mean Squared Error (MSE) and R-squared ($R^2$).
+7. **Final Predictions**: Generating predictions on the evaluation dataset and preparing a submission file.
 
 ## Results
 The XGBoost model achieved the best performance with an $R^2$ of 0.872 on the validation set, followed closely by Bayesian Ridge and Linear Regression models. The K-Nearest Neighbors model had the lowest performance among the tested models.
 
-| Model             | Test MSE | Test $R^2$ | Rank |
-| ----------------- | -------: | -----------: | ---: |
-| **XGBoost**           |  1.64e10 |    **0.872** |    **1** |
-| Bayesian Ridge    |  1.79e10 |        0.860 |    2 |
-| Linear Regression |  1.79e10 |        0.860 |    3 |
-| Random Forest     |  1.85e10 |        0.855 |    4 |
-| KNN               |  2.51e10 |        0.804 |    5 |
+| Models on val       | Test MSE    | Test R2 | Rank |
+|---------------------|------------|---------|------|
+| **GBoost**          | **1.545e10**   | **0.8794**  | **1**  |
+| Bayesian Ridge      | 1.663e10   | 0.8701  | 2    |
+| Linear Regression   | 1.664e10   | 0.8701  | 3    |
+| Random Forest       | 1.856e10   | 0.8550  | 4    |
+| K-Nearest Neighbors | 1.861e10   | 0.8546  | 5    |
 
 <img src="eval/actual_vs_predicted_xgb.png" alt="Illutration" width="100%">
 
@@ -67,12 +68,12 @@ The results improved a lot after cleaning the data more carefully and making use
 
 
 ## How to Run the Project?
-To run this project, make sure you have **Python** (>=3.11) installed on your system. Once ready, follow these steps:
+To run this project, make sure you have **Python** (>=3.11.9) installed on your system. Once ready, follow these steps:
 
 1. **Clone the repository**
 
    ```bash
-   git clone <repository_url>
+   git cclone https://github.com/aurvl/Housing-Price-Prediction.git
    cd Housing-Price-Prediction
    ```
 
@@ -84,21 +85,21 @@ To run this project, make sure you have **Python** (>=3.11) installed on your sy
 
 3. **Run the project**
 
-   * Option 1: Open the Jupyter notebook and execute the cells sequentially:
-
-   * Option 2: Run the training and evaluation script directly:
+   * Step 1: Run the training and evaluation script (**without polynomial features and features selection**) directly:
 
      ```bash
      python train_eval.py
      ```
 
+   * Step 2: Open the Jupyter notebook and execute the cells sequentially
 
 ### **Note**
-- *The project was developed and tested using Python 3.10 on Windows 11 with Jupyter Notebook and VSCode. Results may vary slightly with different Python versions or operating systems.*
+- *The project was developed and tested using Python 3.11.9 on Windows 11 with Jupyter Notebook and VSCode. Results may vary slightly with different Python versions or operating systems.*
 - *To ensure reproducibility, random seeds were set for NumPy, scikit-learn, and XGBoost. However, due to the nature of some algorithms, results may still show minor variations between runs.*
 - *The preprocessing pipeline is effective but not yet fully optimized. Further improvements in feature engineering, especially around the `address` column, could enhance results.*
 - ***To go further:***
     * *Experiment with more advanced models like LightGBM or CatBoost.*
+    * *Experiment other feature selection technics can slightly improve the models*
     * *Explore deep learning approaches using frameworks like TensorFlow or PyTorch.*
     * *Incorporate external data sources for richer feature sets, such as geographic or economic indicators.*
 > Dataset provided by [USA Housing Dataset on GitHub](https://github.com/miirshe/USA-Housing-Analysis-and-Prediction-Price/tree/main).
